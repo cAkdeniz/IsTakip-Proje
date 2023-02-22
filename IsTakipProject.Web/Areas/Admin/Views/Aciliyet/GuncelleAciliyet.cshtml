@@ -1,0 +1,23 @@
+﻿@model AciliyetUpdateViewModel
+@{
+    ViewData["Title"] = "GuncelleAciliyet";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="w-75 mx-auto p-3" asp-action="GuncelleAciliyet" asp-controller="Aciliyet" method="post">
+    <input type="hidden" asp-for="@Model.Id"/>
+    <div class="form-group">
+        <label>Tanım</label>
+        <span asp-validation-for="@Model.Tanim" class="text-danger"></span>
+        <input asp-for="@Model.Tanim" type="text" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>
+
+@section JavaScript
+{
+    <script src="~/lib/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

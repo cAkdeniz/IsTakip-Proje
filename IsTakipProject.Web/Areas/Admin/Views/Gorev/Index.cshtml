@@ -1,0 +1,42 @@
+﻿@model List<GorevListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Model.Count > 0)
+{
+<a asp-action="TamamlanmisGorevler" asp-controller="Gorev" class="btn btn-success my-2">Tamamlanmış Görevler</a>
+<a asp-action="EkleGorev" asp-controller="Gorev" class="btn btn-sm btn-info my-2">Yeni Görev Ekle</a>
+<table class="table table-hover">
+    <tr>
+        <th>Ad</th>
+        <th>Aciklama</th>
+        <th>Oluşturulma Tarihi</th>
+        <th>Aciliyet</th>
+        <th>İşlem</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Ad</td>
+            <td>@item.Aciklama</td>
+            <td>@item.OlusturulmaTarihi.ToString("D")</td>
+            <td>@item.Aciliyet.Tanim</td>
+            <td>
+                <a asp-controller="Gorev" asp-action="GuncelleGorev" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Düzenle</a>
+                <a asp-action="SilGorev" asp-controller="Gorev" asp-route-id="@item.Id" onclick="return confirm('Silmek İstediğinizden Emin Misiniz ?')" class="btn btn-sm btn-danger">Sil</a>
+            </td>
+        </tr>
+    }
+</table>
+}
+else
+{
+<div class="text-center lead mt-4">
+    <p>
+        Sistemde kayıtlı görev bulunamadı.
+    </p>
+    <a asp-action="EkleGorev" asp-controller="Gorev" class="btn btn-sm btn-info my-2">Yeni Görev Ekle</a>
+</div>
+}

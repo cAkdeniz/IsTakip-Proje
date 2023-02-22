@@ -1,0 +1,64 @@
+﻿@model List<GorevListAllViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+    int index = 0;
+}
+
+@foreach (var gorev in Model)
+{
+    index++;
+    <div class="card mt-2">
+        <div class="card-header text-white bg-primary">
+            <h3>@gorev.Ad</h3>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title"><span class="text-danger">Aciliyet Durumu: </span>@gorev.Aciliyet.Tanim</h4>
+            <p class="card-text"><h5>@gorev.Aciklama</h5></p>
+            <br />
+            <h6><span class="text-danger">Oluşturulma Tarihi: </span>@gorev.OlusturulmaTarihi</h6>
+
+            <p class="text-right">
+                @if (gorev.Raporlar.Count > 0)
+                {
+                    <a class="btn btn-light btn-sm" data-toggle="collapse" href="#collapseExample-@index" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Raporlara Git
+                        <span class="badge badge-dark">@gorev.Raporlar.Count</span>
+                    </a>
+                }
+                else
+                {
+                    <span class="font-italic font-weight-bold mr-2">Hiç rapor yazmamışsınız, ilerlemelerinizden bahsedin.</span>
+                    <a asp-action="EkleRapor" asp-route-id="@gorev.Id" class="btn btn-light btn-sm">Rapor Yaz</a>
+                }
+                <a class="btn btn-dark" asp-action="Tamamlandi" asp-route-id="@gorev.Id" onclick="return confirm('Görevi tamamlandı olarak işaretleyeceksiniz. Emin misiniz ?')">
+                    Tamamlandı Olarak İşaretle
+                </a>
+
+            </p>
+            <div class="collapse" id="collapseExample-@index">
+                <a asp-action="EkleRapor" asp-route-id="@gorev.Id" class="btn btn-primary btn-sm mb-1">Rapor Yaz</a>
+                <table class="table table-bordered table-hover table-sm">
+                    <tr>
+                        <th>Tanım</th>
+                        <th>Detay</th>
+                        <th>İşlem</th>
+                    </tr>
+                    @foreach (var rapor in gorev.Raporlar)
+                    {
+                        <tr>
+                            <td>@rapor.Tanim</td>
+                            <td>@rapor.Detay</td>
+                            <td>
+                                <a asp-action="GuncelleRapor" asp-route-id="@rapor.Id" class="btn btn-warning btn-sm">Düzenle</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+}
+

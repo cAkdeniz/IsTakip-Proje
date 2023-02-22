@@ -1,0 +1,70 @@
+﻿@model List<GorevListAllViewModel>
+@{
+    ViewData["Title"] = "TamamlanmisGorevler";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int index = 0;
+}
+    <div class="row">
+        @foreach (var gorev in Model)
+        {
+            index++;
+            <div class="col-md-4">
+                <div class="card mt-2">
+                    <div class="card-header text-white bg-success">
+                        <h3>@gorev.Ad</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><span class="text-danger">Aciliyet Durumu: </span>@gorev.Aciliyet.Tanim</h4>
+                        <p class="card-text"><h5>@gorev.Aciklama</h5></p>
+                        <h6><span class="text-danger">Oluşturulma Tarihi: </span>@gorev.OlusturulmaTarihi</h6>
+                        <br />
+                        <p>
+                            <h4><span class="text-danger">Görevi Tamamlayan Kişi: </span>@gorev.AppUser.Name</h4>
+                        </p>
+
+                        <p class="text-right">
+                            @if (gorev.Raporlar.Count > 0)
+                            {
+                                <a class="btn btn-light btn-sm" data-toggle="collapse" href="#collapseExample-@index" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Raporlara Git
+                                    <span class="badge badge-dark">@gorev.Raporlar.Count</span>
+                                </a>
+                            }
+
+                        </p>
+                        <div class="collapse" id="collapseExample-@index">
+                            <table class="table table-bordered table-hover table-sm">
+                                <tr>
+                                    <th>Tanım</th>
+                                    <th>Detay</th>
+                                </tr>
+                                @foreach (var rapor in gorev.Raporlar)
+                                {
+                                    <tr>
+                                        <td>@rapor.Tanim</td>
+                                        <td>@rapor.Detay</td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        }       
+    </div>
+    <nav aria-label="Page navigation example" class="float-left mt-2">
+        <ul class="pagination">
+            @for (int i = 1; i <= ViewBag.ToplamSayfa; i++)
+            {
+                <li class="page-item @(ViewBag.AktifSayfa == i ? "active" : "")">
+                    <a class="page-link" asp-action="TamamlanmisGorevler" asp-route-aktifSayfa="@i">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+
+
+
+

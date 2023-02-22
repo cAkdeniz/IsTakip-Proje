@@ -1,0 +1,9 @@
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\bin\Release\netcoreapp3.1\IsTakipProject.Entities.deps.json
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\bin\Release\netcoreapp3.1\IsTakipProject.Entities.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\bin\Release\netcoreapp3.1\IsTakipProject.Entities.pdb
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\obj\Release\netcoreapp3.1\IsTakipProject.Entities.csprojAssemblyReference.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\obj\Release\netcoreapp3.1\IsTakipProject.Entities.AssemblyInfoInputs.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\obj\Release\netcoreapp3.1\IsTakipProject.Entities.AssemblyInfo.cs
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\obj\Release\netcoreapp3.1\IsTakipProject.Entities.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\obj\Release\netcoreapp3.1\IsTakipProject.Entities.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Entities\obj\Release\netcoreapp3.1\IsTakipProject.Entities.pdb

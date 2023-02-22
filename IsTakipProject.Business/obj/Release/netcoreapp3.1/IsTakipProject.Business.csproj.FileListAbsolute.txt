@@ -1,0 +1,14 @@
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\bin\Release\netcoreapp3.1\IsTakipProject.Business.deps.json
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\bin\Release\netcoreapp3.1\IsTakipProject.Business.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\bin\Release\netcoreapp3.1\IsTakipProject.Business.pdb
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\bin\Release\netcoreapp3.1\IsTakipProject.DataAccess.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\bin\Release\netcoreapp3.1\IsTakipProject.Entities.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\bin\Release\netcoreapp3.1\IsTakipProject.DataAccess.pdb
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\bin\Release\netcoreapp3.1\IsTakipProject.Entities.pdb
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\obj\Release\netcoreapp3.1\IsTakipProject.Business.csprojAssemblyReference.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\obj\Release\netcoreapp3.1\IsTakipProject.Business.AssemblyInfoInputs.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\obj\Release\netcoreapp3.1\IsTakipProject.Business.AssemblyInfo.cs
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\obj\Release\netcoreapp3.1\IsTakipProject.Business.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\obj\Release\netcoreapp3.1\IsTakipProject.Business.csproj.CopyComplete
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\obj\Release\netcoreapp3.1\IsTakipProject.Business.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.Business\obj\Release\netcoreapp3.1\IsTakipProject.Business.pdb

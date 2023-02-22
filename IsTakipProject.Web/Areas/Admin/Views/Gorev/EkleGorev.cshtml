@@ -1,0 +1,34 @@
+﻿@model GorevAddViewModel
+@{
+    ViewData["Title"] = "EkleGorev";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="mx-auto w-75 p-3" method="post" asp-action="EkleGorev" asp-controller="Gorev">
+    <div class="form-group">
+        <label>Ad :</label>
+        <span asp-validation-for="@Model.Ad" class="text-danger"></span>
+        <input type="text" asp-for="@Model.Ad" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Açıklama :</label>
+        <span asp-validation-for="@Model.Aciklama" class="text-danger"></span>
+        <textarea asp-for="@Model.Aciklama" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Aciliyet Durumu Seçiniz :</label>
+        <span asp-validation-for="@Model.AciliyetId" class="text-danger"></span>
+        <select asp-for="@Model.AciliyetId" class="form-control" asp-items="ViewBag.Aciliyetler">
+            <option hidden value="-1">Seçiniz</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-info ">Kaydet</button>
+</form>
+
+@section JavaScript
+{
+    <script src="~/lib/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+}
+
+

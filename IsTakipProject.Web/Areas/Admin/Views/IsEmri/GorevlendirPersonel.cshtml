@@ -1,0 +1,59 @@
+﻿@model GorevlendirPersonelListViewModel
+@{
+    ViewData["Title"] = "GorevlendirPersonel";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row mt-3">
+   
+    <div class="col-md-4">
+        <div class="card border border-primary shadow">
+            <div class="card-header">
+                <h4 class="card-title text-center">Görev Bilgileri</h4>
+            </div>
+            <div class="card-body pl-3">
+                <h5>@Model.Gorev.Ad</h5>
+                <p class="card-text">@Model.Gorev.Aciklama</p>
+                <p class="card-text">
+                    <strong>Aciliyet Durumu: </strong> <span class="badge badge-danger">@Model.Gorev.Aciliyet.Tanim</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card border border-primary mb-3">
+            <div class="card-header">
+                <h4 class="card-title text-center">Personel Bilgileri</h4>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="~/img/@Model.AppUser.Picture" class="card-img img-thumbnail shadow" style="height:10rem!important" alt="@Model.AppUser.Name">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.AppUser.Name @Model.AppUser.Surname</h5>
+                        <p class="card-text">
+                            <getirGorevAppUserId app-user-id="@Model.AppUser.Id"></getirGorevAppUserId>
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">@Model.AppUser.Email</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 mt-5">
+        <form class="text-center" asp-action="AtaPersonel" method="post">
+            <h3>Yukarıdaki görevi seçilen personele atamak istediğinizden emin misiniz ?</h3>
+            <div class="form-group mt-3">
+                <a asp-action="AtaPersonel" asp-route-id="@Model.Gorev.Id" class="btn btn-warning">Hayır Vazgeç</a>
+                <input type="hidden" name="AppUserId" value="@Model.AppUser.Id"/>
+                <input type="hidden" name="GorevId" value="@Model.Gorev.Id"/>
+                <button class="btn btn-primary">Evet, Görevlendir</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

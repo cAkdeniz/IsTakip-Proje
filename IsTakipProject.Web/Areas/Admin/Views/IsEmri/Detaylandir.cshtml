@@ -1,0 +1,32 @@
+﻿@model GorevListAllViewModel
+@{
+    ViewData["Title"] = "Detaylandir";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Model.Raporlar.Count > 0)
+{
+    <a asp-action="GetirExcel" asp-route-id="@Model.Id" target="_blank" class="btn btn-info mt-2">Excel Görüntüle</a>
+    <a asp-action="GetirPdf" asp-route-id="@Model.Id" target="_blank" class="btn btn-info mt-2 ml-2">Pdf Görüntüle</a>
+    <table class="table table-bordered table-hover mt-3 text-center">
+
+        <tr class="mt-2">
+            <th>Tanim</th>
+            <th>Detay</th>
+        </tr>
+        @foreach (var rapor in Model.Raporlar)
+        {
+            <tr>
+                <td>@rapor.Tanim</td>
+                <td>@rapor.Detay</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="border border-dark mt-3 text-center">
+        <h4>@Model.AppUser.Name @Model.AppUser.Surname görev üzerinde çalışmaya devam ediyor. Henüz bir rapor yazmamıştır.</h4>
+    </div>
+}
+

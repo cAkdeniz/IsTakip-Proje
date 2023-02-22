@@ -1,0 +1,15 @@
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\bin\Release\netcoreapp3.1\IsTakipProject.DataAccess.deps.json
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\bin\Release\netcoreapp3.1\IsTakipProject.DataAccess.runtimeconfig.json
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\bin\Release\netcoreapp3.1\IsTakipProject.DataAccess.runtimeconfig.dev.json
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\bin\Release\netcoreapp3.1\IsTakipProject.DataAccess.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\bin\Release\netcoreapp3.1\IsTakipProject.DataAccess.pdb
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\bin\Release\netcoreapp3.1\IsTakipProject.Entities.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\bin\Release\netcoreapp3.1\IsTakipProject.Entities.pdb
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.csprojAssemblyReference.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.AssemblyInfoInputs.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.AssemblyInfo.cs
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.csproj.CopyComplete
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.dll
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.pdb
+C:\Users\User\Documents\C#Projects\IsTakipProject\IsTakipProject.DataAccess\obj\Release\netcoreapp3.1\IsTakipProject.DataAccess.genruntimeconfig.cache
